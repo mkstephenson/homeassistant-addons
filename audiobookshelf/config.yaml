@@ -1,7 +1,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: "Audiobookshelf"
 description: "A Home Assistant wrapper for Audiobookshelf (https://www.audiobookshelf.org)"
-version: "1.0.0"
+version: "2.25.1"
 slug: "audiobookshelf"
 init: false
 arch:
@@ -9,4 +9,4 @@ arch:
   - amd64
 ports:
   80/tcp: 3080
-image: "ghcr.io/advplyr/audiobookshelf:2.25.1"
+image: "ghcr.io/advplyr/audiobookshelf"
