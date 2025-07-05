@@ -14,6 +14,9 @@ map:
   - type: addon_config
     read_only: false
     path: /config
-  - type: media 
+  - type: media
+  - type: data
+    path: /metadata
+    read_only: false
 image: "ghcr.io/advplyr/audiobookshelf"
 webui: "[PROTO:ssl]://[HOST]:[PORT:80]"
