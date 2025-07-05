@@ -10,7 +10,7 @@ arch:
 ports:
   80/tcp: null
 map:
-  - type: addon_config:
+  - type: addon_config
     read_only: false
     path: /config
   - media: 
