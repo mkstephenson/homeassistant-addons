@@ -13,5 +13,5 @@ map:
   - type: addon_config
     read_only: false
     path: /config
-  - media: 
+  - type: media 
 image: "ghcr.io/advplyr/audiobookshelf"
