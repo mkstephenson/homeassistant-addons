@@ -1,0 +1,11 @@
+name: "Audiobookshelf"
+description: "A Home Assistant wrapper for Audiobookshelf (https://www.audiobookshelf.org)"
+version: "1.0.0"
+slug: "audiobookshelf"
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  80/tcp: 3080
+image: advplyr/audiobookshelf:2.25.1
