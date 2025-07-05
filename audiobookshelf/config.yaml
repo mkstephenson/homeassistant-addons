@@ -16,3 +16,4 @@ map:
     path: /config
   - type: media 
 image: "ghcr.io/advplyr/audiobookshelf"
+webui: "[PROTO:ssl]://[HOST]:[PORT:80]"
