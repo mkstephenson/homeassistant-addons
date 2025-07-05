@@ -8,5 +8,10 @@ arch:
   - aarch64
   - amd64
 ports:
-  80/tcp: 3080
+  80/tcp: null
+map:
+  - addon_config:
+      read_only: false
+      path: /config
+  - media: 
 image: "ghcr.io/advplyr/audiobookshelf"
