@@ -9,4 +9,4 @@ arch:
   - amd64
 ports:
   80/tcp: 3080
-image: advplyr/audiobookshelf:2.25.1
+image: "ghcr.io/advplyr/audiobookshelf:2.25.1"
