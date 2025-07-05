@@ -1,3 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: "Audiobookshelf"
 description: "A Home Assistant wrapper for Audiobookshelf (https://www.audiobookshelf.org)"
 version: "1.0.0"
