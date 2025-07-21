@@ -27,5 +27,5 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            let latestRelease = github.rest.repos.getLatestRelease({ advplyr, audiobookshelf });
+            let latestRelease = github.rest.repos.getLatestRelease({ "owner": "advplyr", "repo": "audiobookshelf" });
             console.log(JSON.stringify(latestRelease));
