@@ -28,4 +28,4 @@ jobs:
         with:
           script: |
             let latestRelease = github.rest.repos.getLatestRelease({ advplyr, audiobookshelf });
-            console.log(JSON.stringify(latestRelease);
+            console.log(JSON.stringify(latestRelease));
