@@ -24,8 +24,23 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Fetch latest audiobookshelf release
-        uses: actions/github-script@v7
+        id: latestVersion
+        uses: pozetroninc/github-action-get-latest-release@v0.8.0
         with:
-          script: |
-            let latestRelease = github.rest.repos.getLatestRelease({ "advplyr", "audiobookshelf" });
-            console.log(JSON.stringify(latestRelease));
+          owner: advplyr
+          repo: audiobookshelf
+          excludes: prerelease, draft
+
+      - name: Set latest version in repo
+        shell: bash
+        run: |
+          version=${{ steps.latestVersion.outputs.release }}
+          version=${version#v}
+          echo "New version: $version"
+          sed -i "s/version:.*/version: \"$version\"/" audiobookshelf/config.yaml
+          cat audiobookshelf/config.yaml
+
+      - uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          file_pattern: 'audiobookshelf/config.yaml'
+          skip_dirty_check: false
