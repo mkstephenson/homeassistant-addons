@@ -27,6 +27,7 @@ jobs:
         id: latestVersion
         uses: pozetroninc/github-action-get-latest-release@v0.8.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           owner: advplyr
           repo: audiobookshelf
           excludes: prerelease, draft
@@ -39,6 +40,11 @@ jobs:
           echo "New version: $version"
           sed -i "s/version:.*/version: \"$version\"/" audiobookshelf/config.yaml
           cat audiobookshelf/config.yaml
+
+      - name: Set latest changelog
+        shell: bash
+        run: |
+          "${{ steps.latestVersion.outputs.description }}" > audiobookshelf/CHANGELOG.md
 
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
