@@ -42,9 +42,11 @@ jobs:
           cat audiobookshelf/config.yaml
 
       - name: Set latest changelog
-        shell: bash
-        run: |
-          "${{ steps.latestVersion.outputs.description }}" > audiobookshelf/CHANGELOG.md
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: audiobookshelf/CHANGELOG.md
+          write-mode: overwrite
+          contents: ${{ steps.latestVersion.outputs.description }}
 
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
