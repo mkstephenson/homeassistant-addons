@@ -50,5 +50,5 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
-          file_pattern: 'audiobookshelf/.*'
+          file_pattern: 'audiobookshelf/config.yaml audiobookshelf/CHANGELOG.md'
           skip_dirty_check: false
