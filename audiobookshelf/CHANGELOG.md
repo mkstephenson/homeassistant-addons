@@ -1,3 +1,5 @@
+#### Important: New authentication system was added in [v2.26.0](https://github.com/advplyr/audiobookshelf/releases/tag/v2.26.0). See https://github.com/advplyr/audiobookshelf/discussions/4460 for details.
+
 ### Added
 
 - Chapter editor tools/enhancements including bulk chapter import & more (see #4384) by @josh-vin in #4384
