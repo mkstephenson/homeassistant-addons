@@ -2,7 +2,7 @@
 name: "Audiobookshelf"
 description: "A Home Assistant wrapper for Audiobookshelf (https://www.audiobookshelf.org)"
 url: https://www.audiobookshelf.org/
-version: "2.29.0"
+version: "2.29.0.1"
 slug: "audiobookshelf"
 init: false
 arch:
