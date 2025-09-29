@@ -15,6 +15,7 @@ map:
     read_only: false
     path: /config
   - type: media
+    read_only: false
   - type: data
     path: /metadata
     read_only: false
