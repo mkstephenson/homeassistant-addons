@@ -1,0 +1,20 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: "Komga"
+description: "A Home Assistant wrapper for Komga (https://komga.org)"
+url: https://komga.org/
+version: "1.23.2"
+slug: "komga"
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  25600/tcp: null
+map:
+  - type: addon_config
+    read_only: false
+    path: /config
+  - type: media
+    path: /data
+image: "ghcr.io/gotson/komga"
+webui: "[PROTO:ssl]://[HOST]:[PORT:25600]"
