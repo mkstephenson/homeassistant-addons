@@ -15,6 +15,5 @@ map:
     read_only: false
     path: /config
   - type: media
-    path: /data
 image: "ghcr.io/gotson/komga"
 webui: "[PROTO:ssl]://[HOST]:[PORT:25600]"
