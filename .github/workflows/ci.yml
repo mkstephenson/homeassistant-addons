@@ -48,7 +48,37 @@ jobs:
           write-mode: overwrite
           contents: ${{ steps.latestVersion.outputs.description }}
 
+      # Komga release steps
+      - name: Fetch latest komga release
+        id: latestKomgaVersion
+        uses: pozetroninc/github-action-get-latest-release@v0.8.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: gotson
+          repo: komga
+          excludes: prerelease, draft
+
+      - name: Set latest komga version in repo
+        shell: bash
+        run: |
+          version=${{ steps.latestKomgaVersion.outputs.release }}
+          version=${version#v}
+          echo "New komga version: $version"
+          sed -i "s/version:.*/version: \"$version\"/" komga/config.yaml
+          cat komga/config.yaml
+
+      - name: Set latest komga changelog
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: komga/CHANGELOG.md
+          write-mode: overwrite
+          contents: ${{ steps.latestKomgaVersion.outputs.description }}
+
       - uses: stefanzweifel/git-auto-commit-action@v6
         with:
-          file_pattern: 'audiobookshelf/config.yaml audiobookshelf/CHANGELOG.md'
+          file_pattern: >-
+            audiobookshelf/config.yaml
+            audiobookshelf/CHANGELOG.md
+            komga/config.yaml
+            komga/CHANGELOG.md
           skip_dirty_check: false
