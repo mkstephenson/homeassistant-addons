@@ -1,50 +1,56 @@
 ## Changelog
 
-## 🚀 Features
-
-- support local artwork in gif format ([f19d7aa](https://github.com/gotson/komga/commits/f19d7aa)), closes [#1853](https://github.com/gotson/komga/issues/1853)
-
 ## 🐛 Fixes
-**api**
-- empty content when x-api-key is sent alongside session ([5a5f8d7](https://github.com/gotson/komga/commits/5a5f8d7)), closes [#2099](https://github.com/gotson/komga/issues/2099)
-- relax JSON deserializer ([eb8bdfc](https://github.com/gotson/komga/commits/eb8bdfc))
-- add id field in HistoricalEventDto ([5e3ca4d](https://github.com/gotson/komga/commits/5e3ca4d))
+**kobo**
+- proxy 401 errors on initialization ([3739951](https://github.com/gotson/komga/commits/3739951))
+- prevent double URL encoding when proxying ([ce3ad4c](https://github.com/gotson/komga/commits/ce3ad4c)), closes [#2130](https://github.com/gotson/komga/issues/2130)
+- proxy Content-Type headers for kobo ([b925f3e](https://github.com/gotson/komga/commits/b925f3e)), closes [#2074](https://github.com/gotson/komga/issues/2074)
 
-## 🏎 Perf
-**api**
-- remove no-transform cache-control from response header ([43c1018](https://github.com/gotson/komga/commits/43c1018)), closes [#2091](https://github.com/gotson/komga/issues/2091)
+**unscoped**
+- properly decode cover href when generating epub cover ([f8ca936](https://github.com/gotson/komga/commits/f8ca936)), closes [#2118](https://github.com/gotson/komga/issues/2118)
 
 ## 🔄️ Changes
-
-- add more logs when epub extension is missing ([730b093](https://github.com/gotson/komga/commits/730b093))
-- add more logs to koreader sync controller ([2f9b4e7](https://github.com/gotson/komga/commits/2f9b4e7))
-- make dslRO transaction aware ([69ba569](https://github.com/gotson/komga/commits/69ba569))
+**kobo**
+- log error responses ([454c6c7](https://github.com/gotson/komga/commits/454c6c7))
 
 ## 🛠  Build
+**docker**
+- use old-releases apt repo ([ba7b826](https://github.com/gotson/komga/commits/ba7b826))
+
 **webui**
-- update Browserslist db ([e842a52](https://github.com/gotson/komga/commits/e842a52))
+- update Browserslist db ([727fe39](https://github.com/gotson/komga/commits/727fe39))
+
+**unscoped**
+- fix svu install ([9a56b30](https://github.com/gotson/komga/commits/9a56b30))
+
+## 📝 Documentation
+**api**
+- fix mediatype ([af66144](https://github.com/gotson/komga/commits/af66144))
 
 ## 🌐 Translation
 **komga-tray**
-- translated using Weblate (Portuguese (Brazil)) ([2259e4b](https://github.com/gotson/komga/commits/2259e4b))
+- translated using Weblate (Arabic) ([a5548a5](https://github.com/gotson/komga/commits/a5548a5))
+- translated using Weblate (Russian) ([8f8d20a](https://github.com/gotson/komga/commits/8f8d20a))
+- translated using Weblate (Galician) ([0f69a3a](https://github.com/gotson/komga/commits/0f69a3a))
 
 **webui**
-- translated using Weblate (Slovak) ([f75ad77](https://github.com/gotson/komga/commits/f75ad77))
-- translated using Weblate (Croatian) ([f2913d1](https://github.com/gotson/komga/commits/f2913d1))
-- translated using Weblate (Czech) ([0b3307c](https://github.com/gotson/komga/commits/0b3307c))
-- translated using Weblate (Portuguese (Brazil)) ([1213309](https://github.com/gotson/komga/commits/1213309))
+- translated using Weblate (Croatian) ([dde0169](https://github.com/gotson/komga/commits/dde0169))
+- translated using Weblate (Russian) ([a2ed7d3](https://github.com/gotson/komga/commits/a2ed7d3))
+- translated using Weblate (Portuguese (Brazil)) ([475f026](https://github.com/gotson/komga/commits/475f026))
+- translated using Weblate (Thai) ([a03f1bd](https://github.com/gotson/komga/commits/a03f1bd))
 
 ## ⚙️ Dependencies
 **ci**
-- bump peter-evans/dockerhub-description from 4.0.2 to 5.0.0 ([bdca990](https://github.com/gotson/komga/commits/bdca990))
-- bump gradle/actions from 4 to 5 ([8081439](https://github.com/gotson/komga/commits/8081439))
-- bump peter-evans/repository-dispatch from 3 to 4 ([80c604e](https://github.com/gotson/komga/commits/80c604e))
-- bump hydraulic-software/conveyor from 19.0 to 20.0 ([e0b583f](https://github.com/gotson/komga/commits/e0b583f))
+- bump actions/checkout from 5 to 6 ([f138fe3](https://github.com/gotson/komga/commits/f138fe3))
+- bump mikepenz/action-junit-report from 5 to 6 ([6b07fda](https://github.com/gotson/komga/commits/6b07fda))
+- bump actions/upload-artifact from 4 to 5 ([fe40ede](https://github.com/gotson/komga/commits/fe40ede))
+- bump actions/setup-node from 5 to 6 ([c23f2d3](https://github.com/gotson/komga/commits/c23f2d3))
 
 **webui**
-- bump axios from 1.8.2 to 1.12.0 in /komga-webui ([d965758](https://github.com/gotson/komga/commits/d965758))
+- bump node-forge from 1.3.1 to 1.3.2 in /komga-webui ([0f25453](https://github.com/gotson/komga/commits/0f25453))
+- bump js-yaml from 3.14.1 to 3.14.2 in /komga-webui ([cd47fc7](https://github.com/gotson/komga/commits/cd47fc7))
 
 
 ## Contributors
 We'd like to thank the following people for their contributions:
-Gauthier, Gauthier Roebroeck, Milo Ivir, Petr Šimek, fantastron27, lucas philippe
+Aleksey, Francisco José Aquino García, Gauthier, Gauthier Roebroeck, Jason, Luiz Henrique Moreira de Souza, Milo Ivir, altinat, redaloe
