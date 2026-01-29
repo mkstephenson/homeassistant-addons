@@ -2,7 +2,7 @@
 name: "Komga"
 description: "A Home Assistant wrapper for Komga (https://komga.org)"
 url: https://komga.org/
-version: "1.24.0"
+version: "1.24.1"
 slug: "komga"
 init: false
 arch:
