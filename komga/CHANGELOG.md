@@ -1,48 +1,44 @@
 ## Changelog
 
+## 🚀 Features
+**komga**
+- add support for solid rar4 archives ([5682a37](https://github.com/gotson/komga/commits/5682a37))
+
 ## 🐛 Fixes
-**api**
-- omit UserDto.ageRestriction instead of returning null ([e3a8cc6](https://github.com/gotson/komga/commits/e3a8cc6))
-
-**epub**
-- some TOC may not be parsed correctly ([5fc0b7e](https://github.com/gotson/komga/commits/5fc0b7e))
-
 **kobo**
-- proxy raw request body to kobo store ([4a7d9a6](https://github.com/gotson/komga/commits/4a7d9a6)), closes [#2289](https://github.com/gotson/komga/issues/2289)
+- enfore content restriction ([bd8b773](https://github.com/gotson/komga/commits/bd8b773))
 
-**koreader**
-- also accept application/json on Accept header ([ddfe65d](https://github.com/gotson/komga/commits/ddfe65d))
-
-**opds2**
-- incorrect latest series navigation links ([717ef82](https://github.com/gotson/komga/commits/717ef82)), closes [#2285](https://github.com/gotson/komga/issues/2285)
-- auth logo issue when using base url ([7c00661](https://github.com/gotson/komga/commits/7c00661)), closes [#2285](https://github.com/gotson/komga/issues/2285)
+**openapi**
+- flatten hierchical schemas ([275cb92](https://github.com/gotson/komga/commits/275cb92))
 
 ## 🛠  Build
-**docker**
-- update base image to Ubuntu 26.04 for amd64 and arm64 ([5d14057](https://github.com/gotson/komga/commits/5d14057))
+**openapi**
+- increase timeout for openapi generation ([4efb161](https://github.com/gotson/komga/commits/4efb161))
 
 **webui**
-- update Browserslist db ([7e0d680](https://github.com/gotson/komga/commits/7e0d680))
-
-**unscoped**
-- update homebrew action ([6c2621b](https://github.com/gotson/komga/commits/6c2621b))
+- update Browserslist db ([9a3bbdd](https://github.com/gotson/komga/commits/9a3bbdd))
+- update Browserslist db ([ba6cb76](https://github.com/gotson/komga/commits/ba6cb76))
 
 ## ⚙️ Dependencies
 **ci**
-- bump gradle/actions from 5 to 6 ([3ca9806](https://github.com/gotson/komga/commits/3ca9806))
+- bump actions/checkout from 6 to 7 ([5da5226](https://github.com/gotson/komga/commits/5da5226))
+
+**komga**
+- bump junrar to 7.6.0 ([ba628f9](https://github.com/gotson/komga/commits/ba628f9))
 
 **webui**
-- bump @xmldom/xmldom from 0.8.12 to 0.8.13 in /komga-webui ([bb60a79](https://github.com/gotson/komga/commits/bb60a79))
-- bump axios from 1.13.5 to 1.15.0 in /komga-webui ([85edd8b](https://github.com/gotson/komga/commits/85edd8b))
-- bump follow-redirects in /komga-webui ([63de6aa](https://github.com/gotson/komga/commits/63de6aa))
-- bump lodash from 4.17.23 to 4.18.1 in /komga-webui ([b77554f](https://github.com/gotson/komga/commits/b77554f))
-- bump @xmldom/xmldom from 0.8.10 to 0.8.12 in /komga-webui ([5620e3f](https://github.com/gotson/komga/commits/5620e3f))
-- bump brace-expansion from 1.1.12 to 1.1.13 in /komga-webui ([263d3dd](https://github.com/gotson/komga/commits/263d3dd))
+- bump launch-editor from 2.6.0 to 2.14.1 in /komga-webui ([910512c](https://github.com/gotson/komga/commits/910512c))
+- bump axios from 1.15.2 to 1.16.0 in /komga-webui ([86362b1](https://github.com/gotson/komga/commits/86362b1))
+- bump qs from 6.14.2 to 6.15.2 in /komga-webui ([f9f402e](https://github.com/gotson/komga/commits/f9f402e))
+- bump js-cookie from 3.0.5 to 3.0.7 in /komga-webui ([3e9a0ea](https://github.com/gotson/komga/commits/3e9a0ea))
+- bump fast-uri from 3.1.0 to 3.1.2 in /komga-webui ([be5f88c](https://github.com/gotson/komga/commits/be5f88c))
+- bump @babel/plugin-transform-modules-systemjs ([0bd8edb](https://github.com/gotson/komga/commits/0bd8edb))
+- bump axios from 1.15.0 to 1.15.2 in /komga-webui ([737cc56](https://github.com/gotson/komga/commits/737cc56))
 
 **unscoped**
-- bump gradle-git-properties plugin from 2.5.2 to 2.5.7 ([dd9c3fa](https://github.com/gotson/komga/commits/dd9c3fa))
+- upgrade Spring Boot to 3.5.14 ([3d7615e](https://github.com/gotson/komga/commits/3d7615e))
 
 
 ## Contributors
 We'd like to thank the following people for their contributions:
-Gauthier, Gauthier Roebroeck, James Ward, Óliver García Albertos
+Gauthier, Gauthier Roebroeck
